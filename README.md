@@ -5,6 +5,6 @@ The site is generated using php for the html and include several simple css styl
 
 To view the site locally, clone the repo:
 ```
-git clone https://alsaplayer/alsaplayer.sourceforge.net.git
+git clone https://github.com/alsaplayer/alsaplayer.sourceforge.net.git
 cd alsaplayer.sourceforge.net
 ```
