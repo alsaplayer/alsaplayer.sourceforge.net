@@ -1,0 +1,105 @@
+Section "Files"
+    FontPath        "/usr/X11R6/lib/X11/fonts/white-cursor/"
+    FontPath        "/usr/X11R6/lib/X11/fonts/misc/"
+    FontPath        "/usr/X11R6/lib/X11/fonts/Speedo/"
+    FontPath        "/usr/X11R6/lib/X11/fonts/Type1/"
+    FontPath        "/usr/X11R6/lib/X11/fonts/CID/"
+    FontPath        "/usr/X11R6/lib/X11/fonts/75dpi/"
+    FontPath        "/usr/X11R6/lib/X11/fonts/100dpi/"
+    FontPath        "/usr/share/fonts/truetype"
+    FontPath        "/usr/X11R6/lib/X11/fonts/Experimental"
+    FontPath	    "/usr/X11R6/lib/X11/fonts/TTF/"
+EndSection
+
+
+Section "Module"
+	Load  "extmod"
+	Load  "dbe"
+	Load  "glx"
+	Load  "freetype"
+	Load  "record"
+	Load  "v4l"
+EndSection
+
+Section "InputDevice"
+	Identifier  "Keyboard0"
+	Driver      "keyboard"
+	Option	    "CoreKeyboard"
+	Option      "XkbRules" "xfree86"
+	Option      "XkbModel" "pc104"
+	Option      "XkbLayout" "us"
+EndSection
+
+Section "InputDevice"
+	Identifier  "Mouse0"
+	Driver      "mouse"
+	Option      "Protocol" "IMPS/2"
+	Option      "Device" "/dev/mouse"
+	Option	    "ZAxisMapping" "4 5"
+EndSection
+
+Section "Monitor"
+	Identifier   "Monitor0"
+	VendorName   "Iiyama"
+	ModelName    "A901HT"
+	HorizSync    30-115
+	VertRefresh  50-160
+	Modeline    "640x480"     25.175  640  672  768  800    480  490  492  525
+	ModeLine "1152x864" 135 1152 1244 1372 1572 864 868 880 900 +hsync +vsync	
+#	Modeline    "1152x864" 137.65 1152 1184 1312 1536 864 866 885 902 -HSync -VSync
+	Modeline    "1440x1032"   223.90   1440 1452 1692 1952   1032 1034 1046 1084	
+	# 1504 -> 1584
+EndSection
+
+Section "Monitor"
+
+    Identifier  "TV"
+	HorizSync 30-50
+	VertRefresh 60
+EndSection
+
+Section "Device"
+        ### Available Driver options are:-
+        Identifier  "geforce"
+        Driver      "nvidia"
+        VendorName  "NVidia"
+        BoardName   "GeForce4 ti4400"
+        BusID       "PCI:1:0:0"
+        Option      "NvAgp" "3"
+	Option	    "PageFlip"		"1"
+	Option	    "WindowFlip"	"1"
+	Option      "CursorShadow"  	"1"
+	Option	    "DigitalVibrance"	"1"
+	Option 	    "SWCursor"		"0"
+	Option      "HWCursor"		"1"
+	Option	    "NoLogo"		"0"
+	Option	    "CursorShadowAlpha" "64"
+	Option	    "CursorShadowYOffset" "2"
+	Option      "CursorShadowXOffset" "4"
+        Option      "VideoKey" "16937"
+
+#	Option		"TwinView"			"1"
+	Option		"SecondMonitorHorizSync"	"30-50"
+	Option		"SecondMonitorVertRefresh"	"60"
+	Option		"TVStandard"			"PAL-B"
+	Option 		"ConnectedMonitor"		"CRT,TV"
+	Option		"TVOutFormat"			"COMPOSITE"
+	Option		"TwinViewOrientation"		"Clone"
+	Option		"MetaModes"			"1024x768,1024x768"
+EndSection
+
+
+Section "Screen"
+	Identifier "Screen_1"
+	Device     "geforce"
+	Monitor    "Monitor0"
+	DefaultDepth 24
+	SubSection "Display"
+		Depth     24
+		Modes	"1440x1032" "1280x1024" "1152x864" "1024x768" "800x600"
+	EndSubSection
+	SubSection "Display"
+		Depth     16
+		Modes	"1440x1032" "1280x1024" "1152x864" "1024x768" "800x600"
+	EndSubSection
+EndSection

@@ -1,0 +1,136 @@
+body {
+ background-color: rgb(218,255,238);
+ color: black;
+ font-family: verdana, arial, helvetica, sans-serif;
+ font-size: medium;
+ margin: 0;
+ padding: 0;
+}
+
+#logo {
+ background-image:url(artwork/top.png) no-repeat;
+ position: absolute;
+ 
+ left: 0px;
+ height: 462px;
+ width: 100%;
+ padding: 0px;
+}
+ 
+a {
+ color: #000000;
+ text-decoration: underline;
+}
+
+a:link {
+ color: #486591;
+}
+
+a:visited {
+ color: #204863;
+}
+
+a:hover {
+ color: #000000;
+ text-decoration: none;
+}
+
+a:active {
+ color: #d5ae83;
+}
+ 
+h2 {
+ font-size: larger;
+ font-weight: bold;
+ letter-spacing: 3px;
+ margin-bottom: 0;
+ margin-left: 0;
+ margin-right: 0;
+ margin-top: 2em;
+ padding: 0;
+}
+ 
+h3 {
+ font-size: x-large;
+ font-weight: bold;
+ letter-spacing: 2px;
+ margin-bottom: 3px;
+ margin-left: 0;
+ margin-right: 0;
+ margin-top: 10px;
+}
+ 
+ul#menu
+{
+ margin: 0px;
+ padding: 0px;
+ margin-top: 118px;
+ list-style-type: none;
+ text-align: center;
+ font-size: larger;
+ font-family: Georgia, Times, Serif;
+}
+ 
+ul#menu li a
+{
+ float: left;
+ display: block;
+ width: 100px;
+ height: 62px;
+ padding-top: 20px;
+ color: #000000;
+ text-decoration: none;
+ background: url(images/roll.jpg) no-repeat 0 0;
+}
+ 
+ul#menu li a:hover
+{
+background: url(images/roll.jpg) no-repeat 0 -82px;
+text-decoration: none;
+}
+ 
+#conteneur {
+ background-color: #ffffff;
+ margin: 0px;
+ padding: 0px;
+ width: 100%;
+}
+ 
+ 
+#content {
+ position: absolute;
+ table-layout: fixed;
+ 
+ left: 0px;
+ top: auto;
+ width: 100%;
+ padding: 0px;
+}
+
+#colone {
+ position: absolute;
+ margin: 0px;
+ padding: 0px;
+ width: 150px;
+ float: left;
+ padding-top: 462px;
+}
+ 
+ul#colone
+{
+ margin-left: 10px;
+ margin-top: 10px;
+ padding: 0px;
+ list-style-type: none;
+}
+ 
+#corps {
+ position: absolute;
+ padding-top: 462px;
+ padding-left: 150px;
+}
+ 
+#pied {
+ text-align: center;
+ clear: both;
+}

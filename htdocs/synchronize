@@ -1,0 +1,6 @@
+#!/bin/sh
+echo Synchronizing with sourceforge.net mirror
+rsync -varz -e ssh --delete * dominique_libre@shells.sourceforge.net:/home/groups/a/al/alsaplayer/htdocs/
+#echo Synchronizing with alsa-project.org mirror
+#rsync -varz -e ssh --delete * andy@160.217.9.25:~/alsaplayer/
+
